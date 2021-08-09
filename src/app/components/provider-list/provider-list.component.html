@@ -1,0 +1,14 @@
+<div class="example-flex-container">
+    <mat-form-field appearance="fill" style="width:90%; margin: auto;">
+        <mat-label>Search Location</mat-label>
+        <input matInput placeholder="Pincode">
+    </mat-form-field>
+    <button mat-mini-fab color="primary" aria-label="Search">
+        <mat-icon>search</mat-icon>
+    </button>
+</div>
+<app-provider-contact-card></app-provider-contact-card>
+<div style="justify-content: center; text-align: center;">
+    <button mat-flat-button color="primary" (click)="onSendNotification()">Send
+        Notification</button>
+</div>
