@@ -1,3 +1,4 @@
+import { ReachmeService } from './../../services/reachme.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: ReachmeService) { }
 
   ngOnInit(): void {
+    this.service.getServiceProviders().subscribe(result=>{
+      console.log("Providers:: " + result)
+    }, error=>{
+      console.log(error.message);
+    })
+
+    this.service.getServices().subscribe(result=>{
+      console.log("Services:: " + result)
+    }, error=>{
+      console.log(error.message);
+    })
   }
 
 }

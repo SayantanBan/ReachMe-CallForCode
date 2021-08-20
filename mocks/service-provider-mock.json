@@ -1,0 +1,85 @@
+{
+  "serviceProviders": [
+    {
+      "ProviderId": "1",
+      "ProviderName": "WelCare",
+      "Address": "Mauli Chowk, Wakad, Pune",
+      "PhoneNumber": "020-123456",
+      "MobileNumber": "98989898",
+      "PinCode": "123123",
+      "ServiceType": "PHARMACY"
+    },
+    {
+      "ProviderId": "2",
+      "ProviderName": "Krishna Medical",
+      "Address": "Dhyari Pune",
+      "PhoneNumber": "020-87676564",
+      "MobileNumber": "4535465",
+      "PinCode": "8786543",
+      "ServiceType": "PHARMACY"
+    },
+    {
+      "ProviderId": "3",
+      "ProviderName": "MediForAll",
+      "Address": "Aundh Pune",
+      "PhoneNumber": "020-8766446",
+      "MobileNumber": "5757664",
+      "PinCode": "67654",
+      "ServiceType": "PHARMCY"
+    },
+    {
+      "ProviderId": "4",
+      "ProviderName": "MediForAll",
+      "Address": "Aundh Pune",
+      "PhoneNumber": "020-8766446",
+      "MobileNumber": "5757664",
+      "PinCode": "67654",
+      "ServiceType": "HOMEFOOD"
+    },
+    {
+      "ProviderId": "6",
+      "ProviderName": "MediForAll",
+      "Address": "Aundh Pune",
+      "PhoneNumber": "020-8766446",
+      "MobileNumber": "098978675",
+      "PinCode": "66757",
+      "ServiceType": "HOMEFOOD"
+    },
+    {
+      "ProviderId": "5",
+      "ProviderName": "MediForAll",
+      "Address": "Aundh Pune",
+      "PhoneNumber": "020-8766446",
+      "MobileNumber": "5757664",
+      "PinCode": "67654",
+      "ServiceType": "HOMEFOOD"
+    },
+    {
+      "ProviderId": "9",
+      "ProviderName": "MediForAll",
+      "Address": "Aundh Pune",
+      "PhoneNumber": "020-8766446",
+      "MobileNumber": "2323535",
+      "PinCode": "5667654",
+      "ServiceType": "LAB"
+    },
+    {
+      "ProviderId": "8",
+      "ProviderName": "MediForAll",
+      "Address": "Aundh Pune",
+      "PhoneNumber": "020-8766446",
+      "MobileNumber": "876463",
+      "PinCode": "9798",
+      "ServiceType": "LAB"
+    },
+    {
+      "ProviderId": "7",
+      "ProviderName": "MediForAll",
+      "Address": "Aundh Pune",
+      "PhoneNumber": "020-8766446",
+      "MobileNumber": "009798685",
+      "PinCode": "9979868",
+      "ServiceType": "LAB"
+    }
+  ]
+}

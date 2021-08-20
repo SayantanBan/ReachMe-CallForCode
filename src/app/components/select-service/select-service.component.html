@@ -1,12 +1,10 @@
-<div class="example-conatiner">
+<div class="example-conatiner" *ngIf="serviceType">
     <h3 style="margin-top: 50px;">Please select a service</h3>
     <mat-form-field appearance="fill">
         <mat-label>Select an option</mat-label>
         <mat-select [(value)]="selected">
             <mat-option>None</mat-option>
-            <mat-option value="option1">Option 1</mat-option>
-            <mat-option value="option2">Option 2</mat-option>
-            <mat-option value="option3">Option 3</mat-option>
+            <mat-option *ngFor="let service of serviceType.services" [value]="service.serviceID">{{service.serviceName}}</mat-option>
         </mat-select>
     </mat-form-field>
 

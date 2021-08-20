@@ -53,6 +53,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { ProviderContactCardComponent } from './components/provider-contact-card/provider-contact-card.component';
 import { SelectServiceComponent } from './components/select-service/select-service.component';
 import { VerifyComponent } from './components/verify/verify.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -68,7 +69,7 @@ import { VerifyComponent } from './components/verify/verify.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    HttpClientModule,
     A11yModule,
     ClipboardModule,
     CdkStepperModule,

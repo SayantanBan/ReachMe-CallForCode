@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "serviceID": "1",
+      "serviceName": "Pharmacy",
+      "serviceType": "PHARMACY"
+    },
+    {
+      "serviceID": "2",
+      "serviceName": "Lab Tests",
+      "serviceType": "HOMEFOOD"
+    },
+    {
+      "serviceID": "3",
+      "serviceName": "Oxygen Cylinders",
+      "serviceType": "OXYGEN"
+    },
+    {
+      "serviceID": "4",
+      "serviceName": "Home Food",
+      "serviceType": "HOMEFOOD"
+    }
+  ]
+}

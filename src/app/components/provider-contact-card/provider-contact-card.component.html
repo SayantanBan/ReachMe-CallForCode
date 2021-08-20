@@ -1,15 +1,15 @@
 <mat-card class="example-card container">
     <div>
-        <mat-checkbox class="checkbox-margin"></mat-checkbox>
+        <mat-checkbox [value]="provider?.ProviderId" class="checkbox-margin"></mat-checkbox>
     </div>
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>A K Medico</mat-card-title>
-        <mat-card-subtitle>Medicine</mat-card-subtitle>
+        <mat-card-title>{{provider?.ProviderName}}</mat-card-title>
+        <mat-card-subtitle>{{provider?.ServiceType}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
         <p>
-            Mehta Building, 55/62, Biplabi Rash Behari Bose Road, Kolkata GPO, Kolkata
+            {{provider?.Address}}
         </p>
     </mat-card-content>
     <mat-card-actions>
