@@ -1,7 +1,7 @@
 import { ServiceProvider } from './../../models/ServiceProvider';
 import { ReachmeService } from './../../services/reachme.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-provider-list',
@@ -10,11 +10,17 @@ import { Router } from '@angular/router';
 })
 export class ProviderListComponent implements OnInit {
   _value: string;
+  id: string;
   providers: ServiceProvider[];
   filterProviders: ServiceProvider[];
   serviceType: string = 'PHARMACY';
+  selectedProviders: string[] = [];
 
-  constructor(private router: Router, private service: ReachmeService) {}
+  constructor(
+    private router: Router,
+    private service: ReachmeService,
+    private route: ActivatedRoute
+  ) {}
 
   get value(): string {
     return this._value;
@@ -35,6 +41,26 @@ export class ProviderListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      this.id = params['id'];
+      console.log('iddddddddddd ' + this.id);
+
+      switch (this.id) {
+        case '1':
+          this.serviceType = 'PHARMACY';
+          break;
+        case '2':
+          this.serviceType = 'LAB';
+          break;
+        case '3':
+          this.serviceType = 'OXYGEN';
+          break;
+        case '4':
+          this.serviceType = 'HOMEFOOD';
+          break;
+      }
+    });
+
     this.service.getServiceProviders().subscribe(
       (result) => {
         this.providers = result.serviceProviders.filter(
@@ -65,4 +91,10 @@ export class ProviderListComponent implements OnInit {
         sp.ProviderName.toLocaleLowerCase().indexOf(filterBy) !== -1
     );
   }
+
+  //TODO:: send selected providers notification
+  selectProvider() {}
+
+  //TODO:: send selected providers notification
+  sendNotification() {}
 }

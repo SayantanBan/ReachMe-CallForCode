@@ -6,18 +6,21 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home', component: HomeComponent
+    path: 'home/:id',
+    component: HomeComponent,
   },
   {
-    path: 'chooseService', component: SelectServiceComponent
+    path: 'chooseService',
+    component: SelectServiceComponent,
   },
   {
-    path: 'verify', component: VerifyComponent
-  }
+    path: 'verify',
+    component: VerifyComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

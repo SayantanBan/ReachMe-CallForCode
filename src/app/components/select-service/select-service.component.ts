@@ -27,6 +27,6 @@ export class SelectServiceComponent implements OnInit {
   }
 
   onNavigate() {
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl(`home/${this.selected}`);
   }
 }
