@@ -54,7 +54,7 @@ import { ProviderContactCardComponent } from './components/provider-contact-card
 import { SelectServiceComponent } from './components/select-service/select-service.component';
 import { VerifyComponent } from './components/verify/verify.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -63,7 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProviderListComponent,
     ProviderContactCardComponent,
     SelectServiceComponent,
-    VerifyComponent
+    VerifyComponent,
   ],
   imports: [
     BrowserModule,
@@ -113,9 +113,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatTreeModule,
     OverlayModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

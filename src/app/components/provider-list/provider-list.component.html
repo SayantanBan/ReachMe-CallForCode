@@ -1,16 +1,33 @@
 <div class="example-flex-container">
-    <mat-form-field appearance="fill" style="width:90%; margin: auto;">
-        <mat-label>Search Location</mat-label>
-        <input matInput placeholder="Pincode">
-    </mat-form-field>
-    <button mat-mini-fab color="primary" aria-label="Search">
-        <mat-icon>search</mat-icon>
+  <mat-form-field class="example-form-field" appearance="outline">
+    <mat-label>Search</mat-label>
+    <input matInput type="text" placeholder="Search" [(ngModel)]="value" />
+    <button
+      mat-button
+      *ngIf="value"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="value = ''"
+    >
+      <mat-icon>close</mat-icon>
     </button>
+    <button
+      *ngIf="!value"
+      mat-button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
 </div>
-<div *ngFor="let provider of providers">
-    <app-provider-contact-card [provider]="provider"></app-provider-contact-card>
+<div *ngFor="let provider of filterProviders">
+  <app-provider-contact-card [provider]="provider"></app-provider-contact-card>
 </div>
-<div style="justify-content: center; text-align: center;">
-    <button mat-flat-button color="primary" (click)="onSendNotification()">Send
-        Notification</button>
+<div style="justify-content: center; text-align: center">
+  <button mat-flat-button color="primary" (click)="onSendNotification()">
+    Send Notification
+  </button>
 </div>
