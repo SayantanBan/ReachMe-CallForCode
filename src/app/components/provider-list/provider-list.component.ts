@@ -79,6 +79,18 @@ export class ProviderListComponent implements OnInit {
     this.router.navigateByUrl('verify');
   }
 
+  addOrRemoveId(providerId: string) {
+    if (this.selectedProviders.includes(providerId)) {
+      this.selectedProviders = this.selectedProviders.filter(
+        (item) => item != providerId
+      );
+      console.log('removed');
+    } else {
+      this.selectedProviders.push(providerId);
+      console.log('added');
+    }
+  }
+
   performFilter(filterBy: string) {
     return this.filterProviders.filter(
       (sp: ServiceProvider) => sp.PinCode.indexOf(filterBy) !== -1

@@ -23,8 +23,19 @@
     </button>
   </mat-form-field>
 </div>
+<div class="chip-container">
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip>2km</mat-chip>
+    <mat-chip>5km</mat-chip>
+    <mat-chip color="primary" selected>8km</mat-chip>
+    <mat-chip color="accent" selected>10km & more</mat-chip>
+  </mat-chip-list>
+</div>
 <div *ngFor="let provider of filterProviders">
-  <app-provider-contact-card [provider]="provider"></app-provider-contact-card>
+  <app-provider-contact-card
+    [provider]="provider"
+    (selectContactCard)="addOrRemoveId(providerId)"
+  ></app-provider-contact-card>
 </div>
 <div style="justify-content: center; text-align: center">
   <button mat-flat-button color="primary" (click)="onSendNotification()">

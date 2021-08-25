@@ -1,21 +1,25 @@
 <mat-card class="example-card container">
-    <div>
-        <mat-checkbox [value]="provider?.ProviderId" class="checkbox-margin"></mat-checkbox>
-    </div>
-    <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{provider?.ProviderName}}</mat-card-title>
-        <mat-card-subtitle>{{provider?.ServiceType}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <p>
-            {{provider?.Address}}
-        </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button><span class="iconify" data-icon="mdi:whatsapp"></span> WhatsApp</button>
-        <button mat-button>
-            <mat-icon>perm_phone_msg</mat-icon> Call
-        </button>
-    </mat-card-actions>
+  <div>
+    <mat-checkbox
+      [value]="provider?.ProviderId"
+      class="checkbox-margin"
+      (change)="setProvider(provider.ProviderId)"
+    ></mat-checkbox>
+  </div>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ provider?.ProviderName }}</mat-card-title>
+    <mat-card-subtitle>{{ provider?.ServiceType }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ provider?.Address }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>
+      <span class="iconify" data-icon="mdi:whatsapp"></span> WhatsApp
+    </button>
+    <button mat-button><mat-icon>perm_phone_msg</mat-icon> Call</button>
+  </mat-card-actions>
 </mat-card>

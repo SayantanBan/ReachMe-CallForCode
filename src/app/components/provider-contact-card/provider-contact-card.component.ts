@@ -1,5 +1,5 @@
 import { ServiceProvider } from './../../models/ServiceProvider';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Input } from '@angular/core';
 
 @Component({
@@ -9,8 +9,17 @@ import { Input } from '@angular/core';
 })
 export class ProviderContactCardComponent implements OnInit {
   @Input() provider: ServiceProvider;
+  @Output() selectContactCard = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  selectProvider(id: string) {
+    this.selectContactCard.emit(id);
+  }
+
+  setProvider(providerId: string) {
+    this.selectProvider(providerId);
+  }
 }
