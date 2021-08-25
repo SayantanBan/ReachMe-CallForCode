@@ -81,11 +81,13 @@ export class ProviderListComponent implements OnInit {
 
   addOrRemoveId(providerId: string) {
     if (this.selectedProviders.includes(providerId)) {
+      console.log(providerId);
       this.selectedProviders = this.selectedProviders.filter(
         (item) => item != providerId
       );
       console.log('removed');
     } else {
+      console.log(providerId);
       this.selectedProviders.push(providerId);
       console.log('added');
     }

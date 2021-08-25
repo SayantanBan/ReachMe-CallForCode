@@ -34,7 +34,7 @@
 <div *ngFor="let provider of filterProviders">
   <app-provider-contact-card
     [provider]="provider"
-    (selectContactCard)="addOrRemoveId(providerId)"
+    (selectContactCard)="addOrRemoveId($event)"
   ></app-provider-contact-card>
 </div>
 <div style="justify-content: center; text-align: center">
