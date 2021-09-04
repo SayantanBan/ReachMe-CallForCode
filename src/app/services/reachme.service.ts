@@ -1,3 +1,4 @@
+import { SendNotification } from './../models/SendNotification';
 import { ServiceProviderList } from './../models/ServiceProviderList';
 import { ServiceType } from './../models/ServiceType';
 import { ServiceProvider } from './../models/ServiceProvider';
@@ -21,6 +22,13 @@ export class ReachmeService {
   getServiceProviders(): Observable<ServiceProviderList> {
     return this.http.get<ServiceProviderList>(
       'http://reachmeservice.us-south.cf.appdomain.cloud/serviceprovider'
+    );
+  }
+
+  sendNotification(notification: SendNotification) {
+    return this.http.post(
+      'http://reachmeservice.us-south.cf.appdomain.cloud/notification/SendNotification',
+      notification
     );
   }
 }

@@ -1,30 +1,36 @@
 <div class="container">
-    <div style="margin-top: 50px;">
-        <mat-form-field appearance="fill">
-            <mat-label>Phone number</mat-label>
-            <input matInput placeholder="Placeholder">
-            <mat-icon matSuffix>phone</mat-icon>
-        </mat-form-field>
-    </div>
-    Or
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Placeholder">
-            <mat-icon matSuffix>email</mat-icon>
-        </mat-form-field>
-    </div>
-    <div>
-        <button mat-button color="primary">Send OTP</button>
-        <button mat-button color="primary">Resend OTP</button>
-    </div>
-    <div>
-        <mat-form-field appearance="outline">
-            <mat-label>Submit OTP</mat-label>
-            <input matInput placeholder="OTP">
-        </mat-form-field>
-    </div>
-    <div>
-        <button mat-raised-button color="primary">Verify</button>
-    </div>
+  <div style="margin-top: 50px">
+    <mat-form-field appearance="fill">
+      <mat-label>Phone number</mat-label>
+      <input matInput placeholder="Placeholder" />
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+  </div>
+  Or
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Placeholder" />
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-button color="primary">Send OTP</button>
+    <button mat-button color="primary">Resend OTP</button>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Submit OTP</mat-label>
+      <input matInput placeholder="OTP" />
+    </mat-form-field>
+  </div>
+  <div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="sendNotiOnVerification()"
+    >
+      Verify
+    </button>
+  </div>
 </div>
