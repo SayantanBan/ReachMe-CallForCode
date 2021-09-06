@@ -53,8 +53,17 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { ProviderContactCardComponent } from './components/provider-contact-card/provider-contact-card.component';
 import { SelectServiceComponent } from './components/select-service/select-service.component';
 import { VerifyComponent } from './components/verify/verify.component';
-import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule } from '@angular/forms';
+import { RegisterServiceProviderComponent } from './components/register-service-provider/register-service-provider.component';
+import { MapComponent } from './components/map/map.component';
+import { LoginComponent } from './components/login/login.component';
+
+import { ServiceProviderComponent } from './components/service-provider/service-provider.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -64,6 +73,14 @@ import { FormsModule } from '@angular/forms';
     ProviderContactCardComponent,
     SelectServiceComponent,
     VerifyComponent,
+    RegisterServiceProviderComponent,
+    MapComponent,
+    LoginComponent,
+    
+     ServiceProviderComponent,
+     ForgotPasswordComponent,
+     RegisterUserComponent,
+     ActivitiesComponent
   ],
   imports: [
     BrowserModule,
