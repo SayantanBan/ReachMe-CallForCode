@@ -19,7 +19,7 @@ export class VerifyComponent implements OnInit {
 
     receivers: [
       { providerId: '1', Number: '+919960647645' },
-      { providerId: '2', Number: '+919960647645' },
+      { providerId: '2', Number: '+919903420150' },
     ],
   };
 
