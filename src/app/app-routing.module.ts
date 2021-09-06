@@ -11,10 +11,9 @@ import { ActivitiesComponent } from './components/activities/activities.componen
 import { RegisterServiceProviderComponent } from './components/register-service-provider/register-service-provider.component';
 import { MapComponent } from './components/map/map.component';
 
-
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: HomeComponent,
   },
 
@@ -46,7 +45,7 @@ const routes: Routes = [
     path: 'login/:username',
     component: LoginComponent,
   },
- 
+
   {
     path: 'map',
     component: MapComponent,
@@ -66,7 +65,7 @@ const routes: Routes = [
   {
     path: 'activities/:userID',
     component: ActivitiesComponent,
-  }
+  },
 ];
 
 @NgModule({
