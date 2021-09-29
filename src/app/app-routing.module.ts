@@ -12,11 +12,7 @@ import { RegisterServiceProviderComponent } from './components/register-service-
 import { MapComponent } from './components/map/map.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
-
+  { path: '', redirectTo: '/chooseService', pathMatch: 'full' },
   {
     path: 'home/:id',
     component: HomeComponent,

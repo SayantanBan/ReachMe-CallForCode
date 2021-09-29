@@ -1,34 +1,43 @@
+<div class="login-wrapper">
+  <!--Login-->
+  <div>
+    <mat-label>Login</mat-label>
+  </div>
+  <div>
+    <!--User ID-->
+    <mat-form-field appearance="fill">
+      <mat-label>User ID</mat-label>
 
-<div class="example-conatiner" >
-    <!--Login-->    
-    <div class="example-conatiner" >
-        <mat-label>Login</mat-label>
-    </div>
-             <div class="example-conatiner" >
-            <!--User ID-->    
-            <mat-form-field appearance="fill">
-                <mat-label>User ID</mat-label>
-                
-                <input matInput placeholder="User Id" id="username" name="username" [(ngModel)]="username" value = {{username}}>
-            </mat-form-field>
-            </div>
+      <input
+        matInput
+        placeholder="User Id"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+        value="{{ username }}"
+      />
+    </mat-form-field>
+  </div>
 
-            
-            <div class="example-conatiner" >
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" type="password" />
+    </mat-form-field>
+  </div>
 
-            <mat-form-field appearance="fill">
-                <mat-label>Password</mat-label>
-                <input matInput placeholder="Password" type = "password" >
-            </mat-form-field>
-            </div>   
-            
-            
-                <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="10px grid">
-                <button mat-flat-button color="primary" (click)="onLogin()">Submit</button>
-                
-                <button mat-flat-button color="accent" (click)="onRegister()">Register</button>
-                 <button mat-flat-button color="primary" (click)="onForgotPassword()">Forgot Password</button>
-                </div>
-            
-    
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="10px grid">
+    <button mat-flat-button color="primary" (click)="onLogin()">Submit</button>
+
+    <button mat-flat-button color="accent" (click)="onRegister()">
+      Register
+    </button>
+  </div>
+  <div>
+    <br />
+    <hr />
+    <button mat-flat-button color="primary" (click)="onForgotPassword()">
+      Forgot Password
+    </button>
+  </div>
 </div>
